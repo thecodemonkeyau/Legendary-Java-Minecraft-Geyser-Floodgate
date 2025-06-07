@@ -13,7 +13,7 @@ services:
       - 19132:19132
       - 19132:19132/udp
     volumes:
-      - minecraft:/minecraft
+      - minecraft-data:/minecraft
     stdin_open: true # docker run -i
     tty: true # docker run -t
     entrypoint: [ "/bin/bash", "/scripts/start.sh" ]
@@ -30,5 +30,9 @@ services:
       #NoViaVersion: "Y" # Optional flag to disable ViaVersion plugin
       #QuietCurl: "Y" # Optional flag to reduce curl log output by suppressing progress meter
 volumes:
-  minecraft:
+  minecraft-data:
     driver: local
+    driver_opts:
+      type: none
+      device: /docker/minecraft
+      o: bind
