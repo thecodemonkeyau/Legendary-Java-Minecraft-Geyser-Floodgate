@@ -10,6 +10,7 @@ services:
     restart: "unless-stopped"
     ports:
       - 25565:25565
+      - 25575:25575
       - 19132:19132
       - 19132:19132/udp
     volumes:
