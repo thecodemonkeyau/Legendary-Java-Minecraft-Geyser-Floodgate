@@ -14,7 +14,7 @@ services:
       - 19132:19132
       - 19132:19132/udp
     volumes:
-      - minecraft-data:/minecraft
+      - minecraft-data:/paper-mc
     stdin_open: true # docker run -i
     tty: true # docker run -t
     entrypoint: [ "/bin/bash", "/scripts/start.sh" ]
