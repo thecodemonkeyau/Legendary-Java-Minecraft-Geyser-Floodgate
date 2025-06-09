@@ -5,7 +5,7 @@
 # To run multiple servers change the volume name under both "volumes" sections and select different ports
 version: "3.5"
 services:
-  minecraftbe:
+  minecraft:
     image: 05jchambers/legendary-minecraft-geyser-floodgate:latest
     restart: "unless-stopped"
     ports:
@@ -30,6 +30,7 @@ services:
       #NoPermCheck: "Y" # Optional flag to skip permissions check
       #NoViaVersion: "Y" # Optional flag to disable ViaVersion plugin
       #QuietCurl: "Y" # Optional flag to reduce curl log output by suppressing progress meter
+
 volumes:
   minecraft-data:
     driver: local
